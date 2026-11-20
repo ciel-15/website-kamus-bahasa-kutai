@@ -58,12 +58,47 @@
 html, body { margin: 0; padding: 0; }
 body {
   font-family: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  background: linear-gradient(180deg, var(--bg-accent) 0%, var(--bg) 220px);
+  background: #f8f7ef;
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background-image: url("/images/lembus.jpe");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+
+  opacity: 0.18;
+
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 15%,
+    transparent 85%
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 15%,
+    transparent 85%
+  );
+}
+
+.app {
+  position: relative;
+  z-index: 1;
 }
 [data-theme="dark"] body {
   background:

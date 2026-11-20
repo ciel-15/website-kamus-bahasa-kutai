@@ -4,12 +4,12 @@
 }
 
 export default function Header({ theme, onToggleTheme }: Props) {
-  const logoSrc = `${import.meta.env.BASE_URL}images/lembuswana.png`
+  const logoSrc = `${import.meta.env.BASE_URL}images/Logo IKN.png`
   return (
     <header className="site-header">
       <div className="container header-inner">
         <div className="brand">
-          <img src={logoSrc} alt="Logo Lembuswana" className="logo" />
+          <img src={logoSrc} alt="Logo IKN" className="logo" />
           <span className="site-name">Kamus Bahasa Kutai</span>
           <span className="badge">ID</span>
         </div>
